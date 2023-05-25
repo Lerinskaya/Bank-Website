@@ -1,5 +1,5 @@
 import styles from '../style';
-import Button from './Button';
+import Button from '../shared/Button';
 
 const CTA = () => {
   return (

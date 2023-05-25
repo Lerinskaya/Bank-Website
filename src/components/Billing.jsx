@@ -5,20 +5,21 @@ import { motion } from 'framer-motion';
 const Billing = () => {
   return (
     <section id='product' className={layout.sectionReverse}>
-      <motion.div 
-        initial='hidden'
-        whileInView="visible"
-        viewport={{once:true, amount:0.5}}
-        transition={{duration: 0.5}}
-        variants={{
-          hidden: {opacity: 0, y:+20},
-          visible: {opacity: 1, y:0}
-        }}
+      <div 
         className={layout.sectionImgReverse}>
-        <img src={bill} alt="billing" className='relative w-[100%] h-[100%] z-[5]' />
+        <motion.img 
+         initial='hidden'
+         whileInView="visible"
+         viewport={{once:true, amount:0.5}}
+         transition={{duration: 0.5}}
+         variants={{
+           hidden: {opacity: 0, y:+20},
+           visible: {opacity: 1, y:0}
+         }}
+        src={bill} alt="billing" className='relative w-[100%] h-[100%] z-[5]' />
         <div className='absolute w-[50%] h-[50%] white__gradient rounded-full z-[3] top-0 -left-1/2'></div>
         <div className='absolute w-[50%] h-[50%] pink__gradient rounded-full z-[0] bottom-0 -left-1/2'></div>
-      </motion.div>
+      </div>
       <motion.div 
         initial='hidden'
         whileInView="visible"
